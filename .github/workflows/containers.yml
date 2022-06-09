@@ -8,7 +8,8 @@ name: Publish Docker image
 on:
   workflow_run:
     workflows: ["Build"]
-    types: [completed]
+    types: 
+      - completed
     
 env:
   TEST_TAG: ${{ secrets.DOCKER_REPOSITORY }}:test    
